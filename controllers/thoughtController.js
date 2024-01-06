@@ -7,11 +7,8 @@ module.exports = {
   async getthoughts(req, res) {
     try {
       const thoughts = await Thought.find();
-      const thoughtObj = {
-        thoughts,
-        headCount: await headCount(),
-      };
-      return res.json(thoughtObj);
+     
+      return res.json(thoughts);
     } catch (err) {
       console.log(err);
       return res.status(500).json(err);
@@ -28,10 +25,7 @@ module.exports = {
         return res.status(404).json({ message: 'No thought with that ID' });
       }
 
-      res.json({
-        thought,
-        grade: await grade(req.params.thoughtId),
-      });
+      res.json(thought);
     } catch (err) {
       console.log(err);
       return res.status(500).json(err);
@@ -41,11 +35,32 @@ module.exports = {
   async createthought(req, res) {
     try {
       const thought = await Thought.create(req.body);
+      const user = await User.findByIdAndUpdate(req.body.userId,{
+        $addToSet:{
+          thoughts:thought._id
+        }
+      },{
+        new: true
+      })
       res.json(thought);
     } catch (err) {
       res.status(500).json(err);
     }
   },
+// update a thought
+async updatethought(req, res) {
+  try {
+    const thought = await Thought.findByIdAndUpdate(req.params.thoughtId,{
+      $set: req.body
+    },{
+      new: true
+    })
+    res.json(thought);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+},
+
   // Delete a thought and remove them from the User
   async deletethought(req, res) {
     try {
@@ -101,7 +116,7 @@ module.exports = {
     try {
       const thought = await Thought.findOneAndUpdate(
         { _id: req.params.thoughtId },
-        { $pull: { reaction: { reactionId: req.params.reactionId } } },
+        { $pull: { reactions: { reactionId: req.params.reactionId } } },
         { runValidators: true, new: true }
       );
 
