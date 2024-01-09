@@ -1,7 +1,7 @@
 # SocialNetworkAPIGGL
 
 ## link to wlakthrough video
-[ling to walkthrough video](https://drive.google.com/file/d/1zpMGgNpGYXyKuPaRZM9wq2jLszDEUP0V/view)
+[ling to walkthrough video](https://app.screencastify.com/v2/watch/qTggORKaMuSJMtfMmp38)
 
 ## link to Repo
 [link to GGL repository url github](https://github.com/GonzaloGodinez/SocialNetworkAPIGGL)
