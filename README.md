@@ -1,5 +1,7 @@
 # SocialNetworkAPIGGL
 
+## link to wlakthrough video
+[ling to walkthrough video](https://drive.google.com/file/d/1zpMGgNpGYXyKuPaRZM9wq2jLszDEUP0V/view)
 
 ## link to Repo
 [link to GGL repository url github](https://github.com/GonzaloGodinez/SocialNetworkAPIGGL)
@@ -22,10 +24,11 @@ A walkthrough video that demonstrates its functionality will be added once the p
 2.	Git clone this repo.
 3.	CD into SocialNetworkAPIGGL.	
 4.	Open using text editor, for VS Code, 
-8.  At the command line type run npm i 
-9.  At the command line type npm run seed
+8.  At the command line type run nserver.jspm i 
+9.  At the command line type nodemon server.js
 7.	Then at the command line
-8.  Follow the prompts.
+8.  run insomia
+9.  create, update, delete users, thoughts and add friends in insomnia
 
 ## Usage
 Creates theblogger_db database.
@@ -37,14 +40,11 @@ View, Add, updates and delete models for:
 
 ## Samples
 
-![Main page blogsocial Network title](./Assets/SocialNetworkAPIGGL.png)
-![Home Login bar tab page](./Assets/SocialNetworkAPIGGLHomeLoginPg.png)
-![Add reaction page](./Assets/SNAddReact.png)
-![Delete Thought](./Assets/SNDeleteOpt.png)
-![Login Screen](./Assets/SSNLogin.png)
-![Log Out](./Assets/SNLogOut.png)
-![New Thought](./Assets/SNNewReview.png)
-![Update Thought](./Assets/SNUpdOpt.png)
+![Main Insomnia settings](./Assets/SocialNetSett.png)
+![Create, Update, Delete, Find all and by id users](./Assets/Users-functions.png)
+![Add, remove Friends](./Assets/Add-remove-a-friend.png)
+![Add remove Reactions](./Assets/Add-remove-react.png)
+![Add remove Thoughts](./Assets/Add-remove-a-thought.png)
 
 ## License
 MIT License

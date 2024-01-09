@@ -69,7 +69,6 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // From here 12/23
   // Add a friend to a user
   async addFriend(req, res) {
     try {
@@ -112,5 +111,5 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // to here
+
 };
